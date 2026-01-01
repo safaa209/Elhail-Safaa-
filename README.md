@@ -96,3 +96,4 @@ Pour lancer le projet localement :
 
 ## 📸 Captures d'écran (Optionnel)
 <!-- Vous pouvez ajouter ici 1 ou 2 screenshots de votre interface -->
+<img width="1366" height="698" alt="image" src="https://github.com/user-attachments/assets/fec442bd-4bea-4469-a807-6542daa29ceb" />
