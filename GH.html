@@ -1,0 +1,90 @@
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Hospitalière</title>
+    <link rel="stylesheet" href="GH.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>Hôpital</h2>
+        <ul>
+            <li class="active" onclick="showSection('patients')">Patients</li>
+            <li onclick="showSection('docteurs')">Docteurs</li>
+            <li onclick="showSection('reception')">Réception</li>
+            <li class="logout" onclick="logout()">Se déconnecter</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+
+        <!-- PATIENTS -->
+        <section id="patients">
+            <h1>Gestion des Patients</h1>
+            <div class="form-box">
+                <input id="p_nom" placeholder="Nom">
+                <input id="p_date" type="date">
+                <input id="p_tel" placeholder="Téléphone">
+                <select id="p_sexe">
+                    <option>Homme</option>
+                    <option>Femme</option>
+                </select>
+                <button onclick="ajouterPatient()">Ajouter</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th><th>Date</th><th>Téléphone</th><th>Sexe</th><th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="patientsTable"></tbody>
+            </table>
+        </section>
+
+        <!-- DOCTEURS -->
+        <section id="docteurs" class="hidden">
+            <h1>Gestion des Docteurs</h1>
+            <div class="form-box">
+                <input id="d_nom" placeholder="Nom Docteur">
+                <input id="d_spec" placeholder="Spécialité">
+                <button onclick="ajouterDocteur()">Ajouter</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th><th>Spécialité</th><th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="docteursTable"></tbody>
+            </table>
+        </section>
+
+        <!-- RECEPTION -->
+
+        <section id="reception" class="hidden">
+            <h1>Réception / Rendez-vous</h1>
+            <div id="msg" class="msg hidden"></div>
+            <div class="form-box">
+                <input id="r_patient" placeholder="Nom Patient">
+                <input id="r_date" type="date">
+                <button onclick="ajouterRDV()">Ajouter</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th><th>Date</th><th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="rdvTable"></tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="GH.js"></script>
+</body>
+</html>
